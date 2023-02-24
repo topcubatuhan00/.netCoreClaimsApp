@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<div class="container-xxl">
+    <form action="/Auth/Login" method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Kullanıcı Adı</label>
+            <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Kullanıcı Adı...">
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Şifre</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Şifre...">
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Giriş Yap</button>
+        <h2 class="text-danger text-sm">@TempData["Hata"]</h2>
+    </form>
+</div>
